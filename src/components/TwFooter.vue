@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <footer class="text-center text-sm py-6 border-t border-gray-200 text-gray-500">
+  <footer class="text-center text-sm py-6 border-t border-gray-200 text-gray-500 dark:text-gray-200">
     <p>
       {{ $t('footer.made_with') }}
       <a

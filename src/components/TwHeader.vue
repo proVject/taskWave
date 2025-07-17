@@ -4,6 +4,7 @@ import {ref} from "vue";
 import TwButton from "./ui/TwButton.vue";
 import TwAddTaskModal from "./TwAddTaskModal.vue";
 import TwLocaleSelect from "./TwLocaleSelect.vue";
+import TwDarkMode from "./TwDarkMode.vue";
 
 const isOpenModal = ref(false)
 const onClickAddTask = () => {
@@ -13,8 +14,9 @@ const onClickAddTask = () => {
 
 <template>
   <div class="flex items-center justify-between bg-sky-700/70 shadow-lg gap-5 w-full px-5 py-3">
-    <h1 class="text-white font-bold text-2xl">TaskWave</h1>
+    <h1 class="text-white font-bold text-md sm:text-2xl">TaskWave</h1>
     <div class="flex items-center gap-3">
+      <tw-dark-mode/>
       <tw-locale-select/>
       <tw-button type="white" @click="onClickAddTask">
         <template #default>
