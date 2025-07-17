@@ -1,0 +1,27 @@
+{
+  "header": {
+    "add_task": "Add task"
+  },
+  "add_task": {
+    "add_task": "Add task",
+    "create": "Create",
+    "title": "Title",
+    "description": "Description"
+  },
+  "edit_task": {
+    "edit_task": "Edit task",
+    "update": "Update",
+    "title": "Title",
+    "description": "Description",
+    "delete": "Delete"
+  },
+  "dashboard": {
+    "todo": "To Do",
+    "in_progress": "In Progress",
+    "done": "Done"
+  },
+  "footer": {
+    "made_with": "Made with ❤\uFE0F by",
+    "contact_me": "Contact me"
+  }
+}

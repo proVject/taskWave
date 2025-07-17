@@ -23,15 +23,15 @@ watchEffect(() => {
 <template>
 <tw-modal v-model:open="open">
   <template #header>
-    <p class="text-xl font-bold">Edit task</p>
+    <p class="text-xl font-bold">{{ $t('edit_task.edit_task') }}</p>
   </template>
   <template #default>
     <form class="flex flex-col gap-4" @submit.prevent>
-      <input v-model="taskToEdit.title" type="text" class="translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" placeholder="Title" />
-      <textarea v-model="taskToEdit.description" class="resize-none translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" placeholder="Description" />
+      <input v-model="taskToEdit.title" type="text" class="translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" :placeholder="$t('edit_task.title')" />
+      <textarea v-model="taskToEdit.description" class="resize-none translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" :placeholder="$t('edit_task.title')" />
       <div class="flex justify-between">
-        <tw-button @click="$emit('remove', taskToEdit.id)" class="self-end" type="danger">Delete</tw-button>
-        <tw-button @click="$emit('update', taskToEdit)" class="self-start" type="primary">Update</tw-button>
+        <tw-button @click="$emit('remove', taskToEdit.id)" class="self-end" type="danger">{{ $t('edit_task.delete') }}</tw-button>
+        <tw-button @click="$emit('update', taskToEdit)" class="self-start" type="primary">{{ $t('edit_task.update') }}</tw-button>
       </div>
     </form>
   </template>

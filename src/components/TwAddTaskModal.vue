@@ -26,13 +26,13 @@ watch(open, () => {
 <template>
 <tw-modal v-model:open="open">
   <template #header>
-    <p class="text-xl font-bold">Add task</p>
+    <p class="text-xl font-bold">{{ $t('add_task.add_task') }}</p>
   </template>
   <template #default>
     <form class="flex flex-col gap-4" @submit.prevent>
-      <input v-model="newTask.title" type="text" class="translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" placeholder="Title" />
-      <textarea v-model="newTask.description" class="resize-none translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" placeholder="Description" />
-      <tw-button @click="onAddTask" class="self-end" type="primary">Create</tw-button>
+      <input v-model="newTask.title" type="text" class="translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" :placeholder="$t('add_task.title')" />
+      <textarea v-model="newTask.description" class="resize-none translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" :placeholder="$t('add_task.description')" />
+      <tw-button @click="onAddTask" class="self-end" type="primary">{{ $t('add_task.create') }}</tw-button>
     </form>
   </template>
 </tw-modal>
