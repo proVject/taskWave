@@ -31,7 +31,7 @@ watchEffect(() => {
       <textarea v-model="taskToEdit.description" class="resize-none translate duration-300 outline-0 border border-sky-300 focus:border-sky-700 px-3 py-2" :placeholder="$t('edit_task.title')" />
       <div class="flex justify-between">
         <tw-button @click="$emit('remove', taskToEdit.id)" class="self-end" type="danger">{{ $t('edit_task.delete') }}</tw-button>
-        <tw-button @click="$emit('update', taskToEdit)" class="self-start" type="primary">{{ $t('edit_task.update') }}</tw-button>
+        <tw-button :disabled="!taskToEdit.title" @click="$emit('update', taskToEdit)" class="self-start" type="primary">{{ $t('edit_task.update') }}</tw-button>
       </div>
     </form>
   </template>

@@ -40,7 +40,7 @@ const shownTask = (t) => {
 </script>
 
 <template>
-  <div class="bg-sky-100 px-2 pb-2 h-100 dark:bg-sky-950 rounded-md shadow-md">
+  <div class="bg-sky-100 px-2 pb-2 h-100 dark:bg-sky-950 rounded-md shadow-md overflow-y-auto">
     <div class="sticky top-0 bg-sky-100 dark:bg-sky-950 p-2">{{ title }}</div>
     <VueDraggableNext
         class="flex flex-col gap-2 h-full"
